@@ -32,6 +32,7 @@ defmodule Home.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:bandit, "~> 1.1"},
       {:dns_cluster, "~> 0.1.1"},
       {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
       {:finch, "~> 0.13"},

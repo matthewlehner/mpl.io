@@ -13,7 +13,7 @@ config :home,
 # Configures the endpoint
 config :home, HomeWeb.Endpoint,
   url: [host: "localhost"],
-  adapter: Phoenix.Endpoint.Cowboy2Adapter,
+  adapter: Bandit.PhoenixAdapter,
   render_errors: [
     formats: [html: HomeWeb.ErrorHTML, json: HomeWeb.ErrorJSON],
     layout: false
