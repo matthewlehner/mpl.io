@@ -25,6 +25,13 @@ kill_signal = "SIGTERM"
     hard_limit = 1000
     soft_limit = 1000
 
+[[http_service.checks]]
+  grace_period = "2s"
+  interval = "15s"
+  method = "GET"
+  timeout = "4s"
+  path = "/healthcheck"
+
 [[vm]]
   cpu_kind = "shared"
   cpus = 1
