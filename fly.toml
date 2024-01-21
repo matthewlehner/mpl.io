@@ -10,7 +10,7 @@ kill_signal = "SIGTERM"
 [build]
 
 [env]
-  PHX_HOST = "mpl.fly.dev"
+  PHX_HOST = "mpl.io"
   PORT = "8080"
 
 [http_service]
