@@ -33,6 +33,7 @@ defmodule Home.MixProject do
   defp deps do
     [
       {:bandit, "~> 1.1"},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:dns_cluster, "~> 0.1.1"},
       {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
       {:finch, "~> 0.13"},
