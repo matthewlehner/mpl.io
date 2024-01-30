@@ -40,6 +40,7 @@ defmodule Home.MixProject do
       {:floki, ">= 0.30.0", only: :test},
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
+      {:nimble_publisher, "~> 1.1"},
       {:phoenix, "~> 1.7.10"},
       {:phoenix_html, "~> 4.0"},
       {:phoenix_live_dashboard, "~> 0.8.2"},
