@@ -7,12 +7,6 @@ config :home, HomeWeb.Endpoint,
   secret_key_base: "R/ukgRc6II3KuYfZVNQz1QTxzSJFqjXjwq3YMgpTlClkuHxZ25OKIqpNs0XJjzXo",
   server: false
 
-# In test we don't send emails.
-config :home, Home.Mailer, adapter: Swoosh.Adapters.Test
-
-# Disable swoosh api client as it is only required for production adapters.
-config :swoosh, :api_client, false
-
 # Print only warnings and errors during test
 config :logger, level: :warning
 
