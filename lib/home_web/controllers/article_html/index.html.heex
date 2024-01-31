@@ -1,0 +1,7 @@
+<div>
+  <ul>
+    <li :for={article <- @articles} class="text-base text-zinc-600 dark:text-zinc-400">
+      <.link href={~p"/articles/#{article.id}"}><%= article.title %></.link>
+    </li>
+  </ul>
+</div>
