@@ -42,16 +42,16 @@ sub-contractors. This is a huge relief.
 
 ### Write more. Seriously.
 
-In May I was at a conference where Nathan Barry gave
-<a href="http://fast.wistia.net/embed/iframe/4n4oitiwyw">this talk</a>. The
-lesson I took home is that at a certain skill level in my field, the difference
-between me and another guy will basically be what people know about me. I can
-tip the scales massively in my favour just by having an established audience in
-my areas of interest and expertise. At this point, I haven't made a single
-dollar from writing, but I have noticed a huge improvement in my ability to
-convey my thoughts in writing. Also, I think at least 50% of the people who have
-visited my site (maybe naively) got the information they were looking for. At
-17,000 people helped, that's not bad.
+In May I was at a conference where Nathan Barry gave [this
+talk](http://fast.wistia.net/embed/iframe/4n4oitiwyw). The lesson I took home is
+that at a certain skill level in my field, the difference between me and another
+guy will basically be what people know about me. I can tip the scales massively
+in my favour just by having an established audience in my areas of interest and
+expertise. At this point, I haven't made a single dollar from writing, but I
+have noticed a huge improvement in my ability to convey my thoughts in writing.
+Also, I think at least 50% of the people who have visited my site (maybe
+naively) got the information they were looking for. At 17,000 people helped,
+that's not bad.
 
 As a secondary point, writing more has also given my communication skills a huge
 boost. Since I'm almost certainly going to be working with people for the rest
@@ -105,8 +105,7 @@ haven't felt like I've had anything good enough to say, but I do. You're
 interested in learning about Ember.js and I'm interested in teaching you how.
 Anyway, you can expect something coming very soon, but for now, I don't have
 anything. In a week or two you'll get my first email about the book and then we
-can start going from there. If you're not on my list - sign up at
-<a href="http://www.learnemberjs.net">www.learnemberjs.net</a>
+can start going from there.
 
 ## What I've learned
 
@@ -140,9 +139,9 @@ totally unnecessary. Instead of writing or focusing on learning and practising,
 I've spent time consuming information around the periphery. Yes, there's a time
 for learning, but more often, it's a time for action. To change this inaction,
 this year I'm focusing on three month planning period for macro level goals,
-which are laid out by defining
-<a href="http://en.wikipedia.org/wiki/SMART_criteria">SMART goals</a> for each
-week. Those are Specific, Measurable, Action-Oriented, Realistic and Time Bound.
+which are laid out by defining [SMART
+goals](http://en.wikipedia.org/wiki/SMART_criteria) for each week. Those are
+Specific, Measurable, Action-Oriented, Realistic and Time Bound.
 
 I thrive on variety and love to have a number of things on the go, but this
 works against me when I don't have a stringent focus on accomplishing the things

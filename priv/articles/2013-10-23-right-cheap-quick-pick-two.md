@@ -40,9 +40,8 @@ burn any bridges in the process.
 
 #### Speak to your client's needs
 
-'You' language is a concept I first heard about in Dale Carnegie's classic,
-<a href="http://www.amazon.com/gp/product/B003WEAI4E/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B003WEAI4E&amp;linkCode=as2&amp;tag=mattlehn-20">How
-to Win Friends and Influence People</a>. Though this book is almost 80 years old
+'You' language is a concept I first heard about in Dale Carnegie's classic, How
+to Win Friends and Influence People. Though this book is almost 80 years old
 right now, it contains timeless advice. If you've ever had trouble communicating
 your point of view, reading this book is your first step to fixing that problem.
 

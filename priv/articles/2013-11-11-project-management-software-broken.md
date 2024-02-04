@@ -7,7 +7,7 @@ date: "2013-11-11T00:00:00Z"
 
 ---
 
-Go to <a href="http://www.reddit.com/r/freelance/">/r/freelance</a> on any day
+Go to [/r/freelance](http://www.reddit.com/r/freelance/) on any day
 of the week and invariably, there will be a post asking which project management
 or time tracking software to use. The answers are always the same. There are two
 types of results:
