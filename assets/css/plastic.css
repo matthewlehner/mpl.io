@@ -1,0 +1,103 @@
+pre,
+.makeup {
+  --shark: #22252b;
+  --shuttle-gray: #848c99;
+  --cadet-blue: #a9b2c3;
+  --lavender: #b57edc;
+  --sunglo: #e06c75;
+  --fountain-blue: #56b6c2;
+  --cornflower-blue: #61afef;
+  --olivine: #98c379;
+  --harvest-gold: #e5c07b;
+  --iron: #d4d7d9;
+  --whisky: #d19a66;
+  --bazaar: #998488;
+
+  --background: var(--shark);
+  --comment: var(--bazaar);
+  --keyword: var(--sunglo);
+  --keyword-namespace: var(--sunglo);
+  --name: var(--lavender);
+  --name-attribute: var(--iron);
+  --punctuation: var(--cadet-blue);
+  --symbol: var(--cornflower-blue);
+  --string: var(--olivine);
+  --string-char: var(--lavender);
+  --string-escape: var(--fountain-blue);
+  --variable: var(--cadet-blue);
+  --operator: var(--sunglo);
+  --class-name: var(--whisky);
+  --literal-number-integer: var(--cornflower-blue);
+}
+
+pre {
+  background-color: var(--background);
+}
+
+.makeup .na {
+  color: var(--name-attribute);
+}
+
+.makeup .mi {
+  color: var(--literal-number-integer);
+}
+
+.makeup .kn {
+  color: var(--keyword-namespace);
+}
+
+.makeup .se {
+  color: var(--string-escape);
+}
+
+.makeup .sc {
+  color: var(--string-char);
+}
+
+.makeup .nc {
+  color: var(--class-name);
+}
+
+.makeup .o {
+  color: var(--operator);
+}
+.makeup .n {
+  color: var(--variable);
+}
+
+.makeup .s {
+  color: var(--string);
+}
+
+/* Symbol */
+.makeup .ss {
+  color: var(--symbol);
+}
+
+/* Comment */
+.makeup .c,
+.makeup .c1 {
+  color: var(--comment);
+  font-style: italic;
+}
+
+/* Keyword Declaration */
+.makeup .k,
+.makeup .kd {
+  color: var(--keyword);
+}
+
+/* Name Function */
+.makeup .nf {
+  color: var(--name);
+}
+
+/* Punctuation */
+.makeup .p {
+  color: var(--punctuation);
+}
+
+.makeup .err {
+  color: red;
+  background-color: pink;
+}
