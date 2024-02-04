@@ -5,7 +5,7 @@ defmodule HomeWeb.Layouts do
 
   def footer(assigns) do
     ~H"""
-    <footer class="mt-32 px-4 sm:px-6">
+    <footer class="max-w-prose w-full mx-auto mt-32 px-4 sm:px-6">
       <div class="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
         <div class="flex flex-row items-center justify-between gap-6">
           <%!--

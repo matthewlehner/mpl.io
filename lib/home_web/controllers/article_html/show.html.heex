@@ -1,9 +1,10 @@
-<section class="text-base text-zinc-600 dark:text-zinc-400 max-w-prose">
+<section class="max-w-prose mx-auto">
   <header>
-    <h1><%= @article.title %></h1>
+    <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl mt-6"><%= @article.title %></h1>
   </header>
 
-  <div>
+  <div class="text-base mt-8 markdown dark:markdown-invert
+    markdown-neutral markdown-p:font-light">
     <%= raw(@article.body) %>
   </div>
 </section>

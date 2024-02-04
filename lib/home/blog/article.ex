@@ -1,6 +1,6 @@
 defmodule Home.Blog.Article do
-  @enforce_keys [:id, :title, :body, :description, :date]
-  defstruct [:id, :title, :body, :description, :date]
+  @enforce_keys [:id, :title, :body, :description, :date, :draft]
+  defstruct [:id, :title, :body, :description, :date, draft: false]
 
   def build(filename, attrs, body) do
     [month_day_id] =

@@ -12,12 +12,12 @@ The unveiling of iOS 7 has brought a lot of focus onto whether or not the design
 direction that Apple has chosen to take has been the right path. In this article
 we're focusing on reproducing the parallax background effect used to 'create a
 whole new experience of depth' (as Jony Ive puts it). The effect is demonstrated
-in the <a href="http://www.apple.com/ios/ios7/#video" target="_blank">iOS 7
-video</a> at the 2:45 mark. When you tilt your iOS device, the background moves
-slightly while the foreground elements stay fixed. This creates an effect which
-separates the two plains and gives a slight illusion of three dimensions.
+in the [iOS 7 video](http://www.apple.com/ios/ios7/#video) at the 2:45 mark.
+When you tilt your iOS device, the background moves slightly while the
+foreground elements stay fixed. This creates an effect which separates the two
+plains and gives a slight illusion of three dimensions.
 
-![Parallax Background Motion](ku-xlarge.gif)
+![Parallax Background Motion](/images/articles/ios-7-style-parallax-background-based-on-device-orientation/ku-xlarge.gif)
 
 To reproduce this in a web browser, we're required to tap into the device's
 gyroscopes and accelerometers through the `deviceorientation` event. Luckily,
@@ -117,7 +117,7 @@ window.addEventListener('deviceorientation', function(eventData) {
 }, false);
 ```
 
-A working demo is available <a href="http://cedar.io/ios7-parallax">here</a> -
+A working demo is available [here](http://cedar.io/ios7-parallax) -
 it's best viewed on an iOS device, but will work on Android as well. Tip your
 device around to see the effect (it's a bit subtle).
 
@@ -130,10 +130,6 @@ ask me why this is a thing that happens, it's flabbergasting even to me.
 
 ## Further resources
 
-- HTML5 Rocks -
-  <a href="http://www.html5rocks.com/en/tutorials/device/orientation/">This End
-  Up: Using Device Orientation</a>
-- caniuse -
-  <a href="http://caniuse.com/#feat=deviceorientation">deviceorientation</a>
-- W3 - <a href="http://www.w3.org/TR/orientation-event/">DeviceOrientation Event
-  Specification</a>
+- HTML5 Rocks - [This End Up: Using Device Orientation](http://www.html5rocks.com/en/tutorials/device/orientation/)
+- caniuse - [deviceorientation](http://caniuse.com/#feat=deviceorientation)
+- W3 - [DeviceOrientatione Event Specification](http://www.w3.org/TR/orientation-event/)

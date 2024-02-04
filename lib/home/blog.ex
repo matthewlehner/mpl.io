@@ -8,9 +8,10 @@ defmodule Home.Blog do
   use NimblePublisher,
     build: Article,
     from: Application.app_dir(:home, "priv/articles/**/*.md"),
-    as: :articles
+    as: :articles,
+    highlighters: [:makeup_elixir, :makeup_html, :makeup_js]
 
-  @articles Enum.sort_by(@articles, & &1.date, {:desc, Date})
+  @articles @articles |> Enum.reject(& &1.draft) |> Enum.sort_by(& &1.date, {:desc, Date})
 
   def all_articles, do: @articles
 
@@ -18,6 +19,4 @@ defmodule Home.Blog do
     Enum.find(all_articles(), &(&1.id == id)) ||
       raise NotFoundError, "article with id=#{id} not found"
   end
-
-  def markdown_to_html(content), do: Earmark.as_html(content)
 end
