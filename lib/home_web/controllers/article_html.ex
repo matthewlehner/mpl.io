@@ -3,7 +3,6 @@ defmodule HomeWeb.ArticleHTML do
 
   embed_templates "article_html/*"
 
-
   attr :date, Date, required: true
   attr :rest, :global
 
