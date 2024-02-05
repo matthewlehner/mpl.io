@@ -1,7 +1,8 @@
 %{
 title: "Freelancer personality types: Good, cheap, or quick. Pick two.",
 date: "2013-10-23T00:00Z",
-path: "right-cheap-quick-pick-two"
+path: "right-cheap-quick-pick-two",
+description: "Explore the trade-offs in software development: quick and cheap, cheap and good, or good and fast. Understand the value of quality, proper pricing, and communicating value to clients."
 }
 
 ---

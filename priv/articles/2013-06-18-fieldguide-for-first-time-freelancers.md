@@ -1,7 +1,8 @@
 %{
 title: "Field guide for first time freelancers",
 date: "2013-06-18T00:00Z",
-path: "fieldguide-for-first-time-freelancers"
+path: "fieldguide-for-first-time-freelancers",
+description: "As a developer, you'll have an easier time freelancing if you know a little bit about these aspects of running a business."
 }
 
 ---

@@ -160,10 +160,6 @@ code into a template, and now all your end users will be able to download CSVs!
 <%= link "Download CSV", to: csv_path(@conn, :export) %>
 ```
 
-#### Credits and Attribution
-
-_Thanks to Oliviu Stoian for the CSV File icon_
-
 [github-csv]: https://github.com/beatrichartz/csv
 [rfc-4180]: https://tools.ietf.org/html/rfc4180
 [put-resp-content-type-docs]: https://hexdocs.pm/plug/Plug.Conn.html#put_resp_content_type/3
