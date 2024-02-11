@@ -10,16 +10,13 @@ defmodule HomeWeb.Router do
     plug :put_secure_browser_headers
   end
 
-  pipeline :api do
-    plug :accepts, ["json"]
-  end
-
   scope "/", HomeWeb do
     pipe_through :browser
 
     get "/", PageController, :home
     get "/writing", ArticleController, :index
     get "/writing/:id", ArticleController, :show
+    get "/rss", RSSController, :index
   end
 
   # Other scopes may use custom stacks.

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Matthew Lehner’s writing</title>
+    <link><%= url(~p"/writing") %></link>
+    <atom:link href="<%= url(~p"/rss") %>" rel="self" type="application/rss+xml" />
+    <description>I write about software, neurodiversity, and mental health. Sometimes…</description>
+    <language>en</language>
+    <copyright>Copyright <%= DateTime.utc_now.year %> Matthew Lehner</copyright>
+    <lastBuildDate><%= to_rfc822(@last_build_date) %></lastBuildDate>
+    <category>IT/Internet/Web development</category>
+    <ttl>60</ttl>
+
+    <%= for article <- @articles do %>
+      <item>
+        <title><%= article.title %></title>
+        <link><%= url(~p"/writing/#{article}") %></link>
+        <guid><%= url(~p"/writing/#{article}") %></guid>
+        <description><![CDATA[ <%= article.description %> ]]></description>
+        <pubDate><%= to_rfc822(article.date) %></pubDate>
+        <source url="<%= url(~p"/writing") %>">Matthew Lehner</source>
+      </item>
+    <% end %>
+  </channel>
+</rss>
