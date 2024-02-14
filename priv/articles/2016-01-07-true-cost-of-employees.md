@@ -2,7 +2,6 @@
 title: "The True Cost of an Employee",
 date: "2016-01-07T01:10Z",
 description: "The total cost of employing a person is a lot more than you might think. You can use this info to help set your own consulting rates.",
-tags: ["freelancing"],
 path: "true-cost-of-employees"
 }
 
