@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title suffix=" · Matthew Lehner">
+      <%= assigns[:page_title] || "Home" %>
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Matthew Lehner’s Writing"
+      href={~p"/rss"}
+    />
+  </head>
+  <body class="h-full bg-white dark:bg-black">
+    <div class="mx-auto grid grid-rows-[1fr_auto] grid-cols-[100%] min-h-svh">
+      <main>
+        <div class="max-w-prose mx-auto px-4 mt-20 sm:px-6 lg:px-8">
+          <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl mt-6">
+            4 oh 4 :(
+          </h1>
+          <div class="mt-6 space-y-2 text-base font-light text-zinc-600 dark:text-zinc-400">
+            <p>
+              There's no page here. Or… this page is here, but it's probably not what you were hoping for.
+            </p>
+            <p>It's a lousy page, in my opinion.</p>
+            <p>
+              Perhaps you wanted the
+              <.link class="underline font-medium" href={~p"/"}>home page</.link>
+              or <.link class="underline font-medium" href={~p"/writing"}>my writing</.link>. They're arguably better than this one.
+            </p>
+          </div>
+        </div>
+      </main>
+      <HomeWeb.Layouts.footer />
+    </div>
+  </body>
+</html>
