@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <title>This is Exceptional! • Matthew Lehner</title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Matthew Lehner’s Writing"
+      href={~p"/rss"}
+    />
+  </head>
+  <body class="h-full bg-white dark:bg-black">
+    <div class="mx-auto grid grid-rows-[1fr_auto] grid-cols-[100%] min-h-svh">
+      <main>
+        <div class="max-w-prose mx-auto px-4 mt-20 sm:px-6 lg:px-8">
+          <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl mt-6">
+            Awwww crap… 🫠
+          </h1>
+          <div class="mt-6 space-y-2 text-base font-light text-zinc-600 dark:text-zinc-400">
+            <p>
+              This is an exceptional page!
+            </p>
+            <p>
+              You shouldn't be seeing it, but something truly remarkable
+              has happened, and the computer program that is running this
+              website does not know what to do.
+            </p>
+            <p>
+              Perhaps you could <button
+                class="underline font-medium"
+                onClick="window.location.reload()"
+              >reload the page</button>.
+            </p>
+            <p>I hope it works! 🤞🏻</p>
+          </div>
+        </div>
+      </main>
+      <HomeWeb.Layouts.footer />
+    </div>
+  </body>
+</html>
