@@ -8,7 +8,12 @@
       <%= assigns[:page_title] || "Home" %>
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
-    <link rel="alternate" type="application/rss+xml" title="Matthew Lehner’s Writing" href={~p"/rss"} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Matthew Lehner’s Writing"
+      href={~p"/rss"}
+    />
   </head>
   <body class="h-full bg-white dark:bg-black">
     <%= @inner_content %>
