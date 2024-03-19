@@ -2,23 +2,45 @@
 title: "Instrumenting Phoenix with Prometheus",
 date: "2024-03-17T00:00Z",
 path: "instrumenting-phoenix-with-prometheus",
-description: "BC government denies Indigenous woman's business registration in her traditional language, citing system limitations. This highlights the need for modern tech to support diverse languages."
+description: "Phoenix provides Telemetry.Metrics out of the box, but they aren't persisted anywhere. I wanted to get them into Prometheus so the metrics we report can be viewed and used in Grafana."
 }
 ---
 
-I recently rebuilt my personal site with Phoenix and hosted it on Fly.io. Full
+I recently rebuilt this site with Phoenix and hosted it on Fly.io. Full
 disclosure, I'm working at Fly.io right now, and have been curious about some of
 the different products we offer that don't seem to be used that much. Today, it
 was getting telemetry metrics out of Phoenix so it's visible in Grafana.
 
-Why do this? Phoenix has LiveDashboard for this kind of thing, but it's not
-persisted and can't be used for alerting. To make this work, we need to get
-metrics into Fly.io's Prometheus instance, then those will be available in the
-managed Grafana instance.
+## Why export `Telemetry.Metrics` to Prometheus?
+
+Out of the box, Phoenix adds some basic telemetry metrics that LiveDashboard
+displays in the performance tab. While LiveDashboard is useful while you're
+looking at it, the metrics it displays are not persisted so we can't view them
+over time or use them for alerting.
+
+I had originally looked into OpenTelemetry because I like the idea of open
+standards. However, for what I want to do (get metrics into Grafana), it wasn't
+the right fit. I don't need the tracing aspects and getting open telemetry data
+into a format that Prometheus could deal with was not straightforward.
+
+First, I tried
+[`telemetry_metrics_prometheus`](https://github.com/beam-telemetry/telemetry_metrics_prometheus),
+but it raised exceptions when trying to use distribution metrics.
+
+I settled on [Peep](https://github.com/rkallos/peep), which is listed in the
+Reporters section of the
+[`Telemetry.Metrics` readme](https://github.com/beam-telemetry/telemetry_metrics?tab=readme-ov-file#reporters).
+This library worked and does what I need it to – take metrics and turn them
+into something Prometheus can scrape.
+
+## What Are We Gonna Do?
+
+To make this work, we need to get metrics into Fly.io's Prometheus instance,
+then those will be available in the managed Grafana instance.
 
 Here's what that looks like:
 
-1. Get Phoenix's telemetry events into a format that Prometheus can scrape
+1. Turn Phoenix's metrics into a format that Prometheus can scrape
 2. Expose an endpoint that these metrics can be scraped from
 3. Do stuff with the metrics in Grafana
 
@@ -28,10 +50,8 @@ already.
 
 ## Preparing telemetry for Prometheus consumption
 
-For this, I chose the
-[Peep](https://github.com/beam-telemetry/telemetry_metrics?tab=readme-ov-file)
-library as it seems to be the most maintained option (and it supports the
-`distribution`
+For this, I chose Peep as it seems to be the most maintained option (and it
+supports the `distribution`
 [metric type in `Telemetry.Metrics`](https://hexdocs.pm/telemetry_metrics/Telemetry.Metrics.html#module-metrics)).
 
 Add it to your dependencies
