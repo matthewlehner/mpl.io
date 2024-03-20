@@ -18,7 +18,19 @@ defmodule HomeWeb.Telemetry do
       {Bandit, plug: HomeWeb.Telemetry.PeepPlug, port: 9091}
     ]
 
+    :telemetry.attach(
+      "web-request-handler",
+      [:phoenix, :router_dispatch, :stop],
+      &handle_event/4,
+      nil
+    )
+
     Supervisor.init(children, strategy: :one_for_one)
+  end
+
+  def handle_event([:phoenix, :router_dispatch, :stop], measurements, metadata, _config) do
+    metadata = %{request_path: metadata.conn.request_path}
+    :telemetry.execute([:home, :router_dispatch, :complete], measurements, metadata)
   end
 
   def metrics do
@@ -57,7 +69,13 @@ defmodule HomeWeb.Telemetry do
       last_value("vm.memory.total", unit: {:byte, :kilobyte}),
       last_value("vm.total_run_queue_lengths.total"),
       last_value("vm.total_run_queue_lengths.cpu"),
-      last_value("vm.total_run_queue_lengths.io")
+      last_value("vm.total_run_queue_lengths.io"),
+
+      # Site Metrics
+      counter("home.router_dispatch.complete.duration",
+        tags: [:request_path],
+        unit: {:native, :millisecond}
+      )
     ]
   end
 
