@@ -21,7 +21,7 @@ defmodule HomeWeb.Telemetry do
     :telemetry.attach(
       "web-request-handler",
       [:phoenix, :router_dispatch, :stop],
-      &handle_event/4,
+      &__MODULE__.handle_event/4,
       nil
     )
 
