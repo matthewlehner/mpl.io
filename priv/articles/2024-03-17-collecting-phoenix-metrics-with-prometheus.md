@@ -1,15 +1,17 @@
 %{
-title: "Instrumenting Phoenix with Prometheus",
+title: "Collecting Phoenix's Telemetry.Metrics with Prometheus",
 date: "2024-03-17T00:00Z",
-path: "instrumenting-phoenix-with-prometheus",
-description: "Phoenix provides Telemetry.Metrics out of the box, but they aren't persisted anywhere. I wanted to get them into Prometheus so the metrics we report can be viewed and used in Grafana."
+path: "collecting-phoenix-metrics-with-prometheus",
+description: "Phoenix provides Telemetry.Metrics out of the box, but these metrics aren't persisted anywhere. I wanted to get them into Prometheus so the metrics we report can be viewed and used in Grafana."
 }
 ---
 
-I recently rebuilt this site with Phoenix and hosted it on Fly.io. Full
-disclosure, I'm working at Fly.io right now, and have been curious about some of
-the different products we offer that don't seem to be used that much. Today, it
-was getting telemetry metrics out of Phoenix so it's visible in Grafana.
+I recently rebuilt this site with Phoenix and hosted it on Fly.io (where I'm
+working). As part of this, I was curious about practical uses for the telemetry
+events that are included in Phoenix and the other libraries. In order to observe
+the application's performance, I wanted to get the telemetry data somewhere it
+could be observed. Fly.io provides managed Prometheus and Grafana, so I figured
+this would be the easiest path forward.
 
 ## Why export `Telemetry.Metrics` to Prometheus?
 

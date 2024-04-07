@@ -8,6 +8,7 @@ defmodule HomeWeb.Router do
     plug :put_root_layout, html: {HomeWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug HomeWeb.Redirects
   end
 
   scope "/", HomeWeb do
