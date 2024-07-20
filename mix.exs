@@ -44,7 +44,7 @@ defmodule Home.MixProject do
       {:makeup_html, "~> 0.1.1"},
       {:makeup_js, "~> 0.1.0"},
       {:nimble_publisher, "~> 1.1"},
-      {:peep, "~> 2.1"},
+      {:peep, "~> 3.0"},
       {:phoenix, "~> 1.7.10"},
       {:phoenix_html, "~> 4.0"},
       {:phoenix_live_dashboard, "~> 0.8.2"},
