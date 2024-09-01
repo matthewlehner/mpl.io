@@ -8,38 +8,38 @@ primary_region = "sea"
 kill_signal = "SIGTERM"
 
 [deploy]
-  strategy = "immediate"
+strategy = "immediate"
 
 [build]
 
 [env]
-  PHX_HOST = "mpl.io"
-  PORT = "8080"
+PHX_HOST = "mpl.io"
+PORT = "8080"
 
 [http_service]
-  internal_port = 8080
-  force_https = true
-  auto_stop_machines = "suspend"
-  auto_start_machines = true
-  min_machines_running = 1
-  processes = ["app"]
-  [http_service.concurrency]
-    type = "connections"
-    hard_limit = 1000
-    soft_limit = 1000
+internal_port = 8080
+force_https = true
+auto_stop_machines = "suspend"
+auto_start_machines = true
+min_machines_running = 1
+processes = ["app"]
+[http_service.concurrency]
+type = "connections"
+hard_limit = 1000
+soft_limit = 1000
 
 [[http_service.checks]]
-  grace_period = "2s"
-  interval = "15s"
-  method = "GET"
-  timeout = "4s"
-  path = "/healthcheck"
+grace_period = "2s"
+interval = "15s"
+method = "GET"
+timeout = "4s"
+path = "/healthcheck"
 
 [[vm]]
-  cpu_kind = "shared"
-  cpus = 1
-  memory_mb = 1024
+cpu_kind = "shared"
+cpus = 1
+memory_mb = 1024
 
 [[metrics]]
-  port = 9091
-  path = "/metrics"
+port = 9091
+path = "/metrics"
