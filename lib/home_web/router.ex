@@ -15,6 +15,7 @@ defmodule HomeWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/cv", PageController, :cv
     get "/writing", ArticleController, :index
     get "/writing/:id", ArticleController, :show
     get "/rss", RSSController, :index

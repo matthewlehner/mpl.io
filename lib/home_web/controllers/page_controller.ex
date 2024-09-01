@@ -8,4 +8,11 @@ defmodule HomeWeb.PageController do
     |> assign(:page_title, "Software developer, technical founder")
     |> render(:home)
   end
+
+  def cv(conn, _params) do
+    conn
+    |> assign(:page_title, "Work Experience")
+    |> assign(:roles, Home.CV.roles())
+    |> render(:resume)
+  end
 end
