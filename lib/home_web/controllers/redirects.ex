@@ -3,7 +3,7 @@ defmodule HomeWeb.Redirects do
 
   def init(opts), do: opts
 
-  def call(conn = %{request_path: "/writing/instrumenting-phoenix-with-prometheus"}, _opts),
+  def call(%{request_path: "/writing/instrumenting-phoenix-with-prometheus"} = conn, _opts),
     do: conn |> redirect(to: ~p"/writing/collecting-phoenix-metrics-with-prometheus") |> halt()
 
   def call(conn, _opts), do: conn
