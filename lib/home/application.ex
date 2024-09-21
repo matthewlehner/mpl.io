@@ -11,8 +11,6 @@ defmodule Home.Application do
       HomeWeb.Telemetry,
       {DNSCluster, query: Application.get_env(:home, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Home.PubSub},
-      # Start the Finch HTTP client for sending emails
-      {Finch, name: Home.Finch},
       # Start a worker by calling: Home.Worker.start_link(arg)
       # {Home.Worker, arg},
       # Start to serve requests, typically the last entry

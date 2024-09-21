@@ -36,7 +36,6 @@ defmodule Home.MixProject do
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:dns_cluster, "~> 0.1.1"},
       {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
-      {:finch, "~> 0.13"},
       {:floki, ">= 0.30.0", only: :test},
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
