@@ -8,7 +8,7 @@ defmodule HomeWeb.ArticleHTML do
 
   def published_at(assigns) do
     ~H"""
-    <time {@rest} datetime={@date}><%= format_date(@date) %></time>
+    <time {@rest} datetime={@date}>{format_date(@date)}</time>
     """
   end
 

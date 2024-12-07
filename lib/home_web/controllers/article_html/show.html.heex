@@ -25,7 +25,7 @@
       <article class="max-w-prose mx-auto">
         <header class="flex flex-col">
           <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl mt-6">
-            <%= @article.title %>
+            {@article.title}
           </h1>
           <div class="order-first flex items-center gap-x-3">
             <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
@@ -37,7 +37,7 @@
         </header>
 
         <div class="text-base mt-8 markdown dark:markdown-invert markdown-neutral markdown-p:font-light markdown-li:font-light markdown-img:mx-auto">
-          <%= raw(@article.body) %>
+          {raw(@article.body)}
         </div>
       </article>
     </div>

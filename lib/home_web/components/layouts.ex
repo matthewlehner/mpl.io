@@ -17,7 +17,7 @@ defmodule HomeWeb.Layouts do
           </div>
           --%>
           <p class="text-sm text-zinc-400 dark:text-zinc-500">
-            &copy; <%= Date.utc_today() |> Map.get(:year) %> Matthew Lehner. All rights reserved. For real.
+            &copy; {Date.utc_today() |> Map.get(:year)} Matthew Lehner. All rights reserved. For real.
           </p>
         </div>
       </div>
@@ -31,7 +31,7 @@ defmodule HomeWeb.Layouts do
   def footer_link(assigns) do
     ~H"""
     <.link {@rest} class="transition hover:text-teal-500 dark:hover:text-teal-400">
-      <%= render_slot(@inner_block) %>
+      {render_slot(@inner_block)}
     </.link>
     """
   end

@@ -75,11 +75,11 @@ defmodule HomeWeb.PageHTML do
           <dl class="flex flex-auto flex-wrap gap-x-2">
             <dt class="sr-only">Company</dt>
             <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-              <%= role.company %>
+              {role.company}
             </dd>
             <dt class="sr-only">Role</dt>
             <dd class="text-xs text-zinc-500 dark:text-zinc-400">
-              <%= role.title %>
+              {role.title}
             </dd>
             <dt class="sr-only">Date</dt>
             <dd
@@ -87,11 +87,11 @@ defmodule HomeWeb.PageHTML do
               aria-label={"#{if is_map(role.start), do: role.start.label, else: role.start} until #{if is_map(role.end), do: role.end.label, else: role.end}"}
             >
               <time datetime={if is_map(role.start), do: role.start.dateTime, else: role.start}>
-                <%= if is_map(role.start), do: role.start.label, else: role.start %>
+                {if is_map(role.start), do: role.start.label, else: role.start}
               </time>
               <span aria-hidden="true">—</span>
               <time datetime={if is_map(role.end), do: role.end.dateTime, else: role.end}>
-                <%= if is_map(role.end), do: role.end.label, else: role.end %>
+                {if is_map(role.end), do: role.end.label, else: role.end}
               </time>
             </dd>
           </dl>
