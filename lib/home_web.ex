@@ -43,7 +43,7 @@ defmodule HomeWeb do
         layouts: [html: HomeWeb.Layouts]
 
       import Plug.Conn
-      import HomeWeb.Gettext
+      use Gettext, backend: HomeWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -85,7 +85,7 @@ defmodule HomeWeb do
       import Phoenix.HTML
       # Core UI components and translation
       import HomeWeb.CoreComponents
-      import HomeWeb.Gettext
+      use Gettext, backend: HomeWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS

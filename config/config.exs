@@ -32,7 +32,7 @@ config :home, Home.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,
-  version: "0.24.0",
+  version: "0.24.2",
   default: [
     args:
       ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
@@ -58,7 +58,7 @@ config :logger, :console,
   metadata: [:request_id]
 
 # Use Jason for JSON parsing in Phoenix
-config :phoenix, :json_library, Jason
+config :phoenix, :json_library, JSON
 
 # Use `time_zone_info` for the timezone database
 config :elixir, :time_zone_database, TimeZoneInfo.TimeZoneDatabase

@@ -38,7 +38,6 @@ defmodule Home.MixProject do
       {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
       {:floki, ">= 0.30.0", only: :test},
       {:gettext, "~> 0.20"},
-      {:jason, "~> 1.2"},
       {:makeup_elixir, "~> 1.0.0"},
       {:makeup_html, "~> 0.1.1"},
       {:makeup_js, "~> 0.1.0"},
