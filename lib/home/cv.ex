@@ -37,6 +37,16 @@ defmodule Home.CV do
   def roles do
     [
       %{
+        company: "Hiive",
+        title: "Principal Software Engineer",
+        logo: ~p"/images/logos/hiive.svg",
+        start: "2024",
+        end: %{
+          label: "Present",
+          dateTime: 2025
+        }
+      },
+      %{
         company: "Fly.io",
         title: "Staff Developer",
         logo: ~p"/images/logos/flyio.svg",
