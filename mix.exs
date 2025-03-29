@@ -34,12 +34,12 @@ defmodule Home.MixProject do
     [
       {:bandit, "~> 1.1"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
-      {:dns_cluster, "~> 0.1.1"},
+      {:dns_cluster, "~> 0.2.0"},
       {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
       {:floki, ">= 0.30.0", only: :test},
       {:gettext, "~> 0.20"},
       {:makeup_elixir, "~> 1.0.0"},
-      {:makeup_html, "~> 0.1.1"},
+      {:makeup_html, "~> 0.2.0"},
       {:makeup_js, "~> 0.1.0"},
       {:nimble_publisher, "~> 1.1"},
       {:peep, "~> 3.0"},
@@ -49,7 +49,7 @@ defmodule Home.MixProject do
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 1.0.0-rc.0", override: true},
       {:sobelow, "~> 0.13", only: [:dev, :test], runtime: false},
-      {:tailwind, "~> 0.2.0", runtime: Mix.env() == :dev},
+      {:tailwind, "~> 0.3.0", runtime: Mix.env() == :dev},
       {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},
       {:time_zone_info, "~> 0.7"}
