@@ -64,7 +64,6 @@ defmodule HomeWeb.PageHTML do
           >
           </path>
         </svg>
-        <%!-- <.icon name="hero-briefcase" class="h-6 w-6 flex-none fill-zinc-100 dark:fill-zinc-100/10" /> --%>
         <span class="ml-3">Work</span>
       </h2>
       <ol class="mt-6 space-y-4">
