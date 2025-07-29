@@ -597,6 +597,8 @@ defmodule HomeWeb.CoreComponents do
     """
   end
 
+  defdelegate wheel_of_life_svg(assigns), to: HomeWeb.Components.WheelOfLifeSVG
+
   ## JS Commands
 
   def show(js \\ %JS{}, selector) do

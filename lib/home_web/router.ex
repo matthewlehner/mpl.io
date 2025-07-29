@@ -19,6 +19,12 @@ defmodule HomeWeb.Router do
     get "/writing", ArticleController, :index
     get "/writing/:id", ArticleController, :show
     get "/rss", RSSController, :index
+
+    live_session :default do
+      scope "/tools" do
+        live "/wheel-of-life", WheelOfLifeLive
+      end
+    end
   end
 
   # Other scopes may use custom stacks.
