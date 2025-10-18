@@ -14,5 +14,12 @@ defmodule HomeWeb.Redirects do
           "https://reflect.site/g/mpl/disability-tax-credit-for-adhd/b58bed37edcb48d8b9b9c67f7863278a"
       )
 
+  def call(%{request_path: "/basic-133-guides"} = conn, _opts),
+    do:
+      redirect(conn,
+        external:
+          "https://reflect.site/g/mpl/addca-basic-coaching-133/5c90e909e749461d8de3835d7b5d82f0"
+      )
+
   def call(conn, _opts), do: conn
 end
