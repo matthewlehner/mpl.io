@@ -22,11 +22,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Elixir
-      uses: erlef/setup-beam@v1
-      with:
-        version-file: '.tool-versions'
-        version-type: 'strict'
+    - name: Set up tools (Erlang, Elixir, Node)
+      uses: jdx/mise-action@v5
     - name: Restore dependencies cache
       uses: actions/cache@v4
       with:
