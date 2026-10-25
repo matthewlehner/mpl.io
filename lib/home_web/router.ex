@@ -44,6 +44,8 @@ defmodule HomeWeb.Router do
       pipe_through :browser
 
       live_dashboard "/dashboard", metrics: HomeWeb.Telemetry
+
+      live "/components", HomeWeb.ComponentsLive
     end
   end
 end
