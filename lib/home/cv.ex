@@ -30,7 +30,9 @@ defmodule Home.CV do
                      I'm a great fit in a small, autonomous team that is close to its customers and has a
                      mission to ship great work.
                    """
-                   |> Earmark.as_html!()
+                   |> MDExNative.Comrak.markdown_to_html(
+                     extension: [table: true, autolink: true, strikethrough: true]
+                   )
 
   def readme, do: @personal_readme
 
