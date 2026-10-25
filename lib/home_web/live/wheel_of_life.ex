@@ -55,6 +55,8 @@ defmodule HomeWeb.WheelOfLifeLive do
         >
           {rating}
         </button>
+
+        <.wheel_of_life_radio section={@current_question} />
       </div>
     </section>
     """

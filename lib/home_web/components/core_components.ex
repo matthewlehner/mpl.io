@@ -597,6 +597,33 @@ defmodule HomeWeb.CoreComponents do
     """
   end
 
+  attr :section, :string, required: true
+
+  def wheel_of_life_radio(assigns) do
+    ~H"""
+    <fieldset>
+      <legend class="text-xl font-bold">Rate {@section} on a scale of 0 to 10</legend>
+      <div class="flex flex-row gap-4">
+        <div :for={rating <- 0..10}>
+          <input
+            type="radio"
+            name="wheel_of_life"
+            value={rating}
+            id={"#{@section}-#{rating}"}
+            class="peer"
+          />
+          <label
+            for={"#{@section}-#{rating}"}
+            class="peer-checked:border-purple-500 peer-checked:bg-purple-500 rounded w-12 h-12 hover:bg-blue-500 hover:text-white block"
+          >
+            {rating}
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    """
+  end
+
   defdelegate wheel_of_life_svg(assigns), to: HomeWeb.Components.WheelOfLifeSVG
 
   ## JS Commands
