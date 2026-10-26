@@ -1,7 +1,36 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
+@import "./plastic.css" layer(utilities);
 
-/* This file is for your main application CSS */
+@source "../js";
+@source "../../lib/home_web.ex";
+@source "../../lib/home_web";
 
-@import "./plastic.css";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography" {
+  className: markdown;
+}
+@plugin "../vendor/heroicons";
+
+@theme {
+  --color-brand: #fd4f00;
+}
+
+/* Allows prefixing tailwind classes with LiveView classes to add rules
+   only when LiveView classes are applied, for example:
+
+       <div class="phx-click-loading:animate-ping">
+*/
+@custom-variant phx-click-loading (.phx-click-loading&, .phx-click-loading &);
+@custom-variant phx-submit-loading (.phx-submit-loading&, .phx-submit-loading &);
+@custom-variant phx-change-loading (.phx-change-loading&, .phx-change-loading &);
+
+/* Tailwind v4 changed the default border color to currentcolor; keep v3's. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
