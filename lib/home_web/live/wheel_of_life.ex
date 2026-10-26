@@ -47,7 +47,7 @@ defmodule HomeWeb.WheelOfLifeLive do
       <div class="flex flex-row gap-4">
         <button
           :for={rating <- 0..10}
-          class="border-2 rounded w-12 h-12 hover:bg-blue-500 hover:text-white"
+          class="border-2 rounded-sm w-12 h-12 hover:bg-blue-500 hover:text-white"
           aria-label={"Rating #{rating}"}
           phx-value-section={@current_question}
           phx-value-rating={rating}
